@@ -22,8 +22,13 @@
 		</view>
 		<scroll-view scroll-x="true" >
 			<view class="game-type">
-				<view class="" v-for="item in gameTypeList">
-					{{item.key}}
+				<view class="game-type-item" v-for="item in gameTypeList" :key="item.code">
+					<view>
+						<image class="game-type-image" :src="item.image" mode=""></image>
+					</view>
+					<view class="">
+						{{item.cate_name}}
+					</view>
 				</view>
 			</view>
 		</scroll-view>
@@ -32,6 +37,7 @@
 </template>
 
 <script>
+	import { getCateGames,getCategoryList,getBanner } from "@/api/home/index.js"
 	export default {
 		data() {
 			return {
@@ -45,32 +51,36 @@
 						imageUrl: '/static/logo.png'
 					}
 				],
-				gameTypeList:[{
-					key:'Popular',
-					icon:''
-				},{
-					key:'Slots',
-					icon:''
-				},{
-					key:'Pescaria',
-					icon:''
-				},{
-					key:'Jogos',
-					icon:''
-				},{
-					key:'Recentes',
-					icon:''
-				},{
-					key:'Favorite',
-					icon:''
-				}]
+				gameTypeList:[]
 			}
 		},
 		onLoad() {
 
 		},
+		created() {
+			this.init()
+		},
 		methods: {
-
+			init(){
+				this.getBannerFun()
+				this.getCategoryListFun()
+				this.getCateGamesFun()
+			},
+			getCategoryListFun(){
+				getCategoryList().then(res=>{
+					this.gameTypeList = res
+				})
+			},
+			getCateGamesFun(){
+				getCateGames().then(res=>{
+					console.log(res);
+				})
+			},
+			getBannerFun(){
+				getBanner().then(res=>{
+					console.log(res);
+				})
+			}
 		}
 	}
 </script>
@@ -126,6 +136,16 @@
 		.game-type {
 			display: flex;
 			margin-top: 20rpx;
+			flex-wrap: nowrap;
+			.game-type-item {
+				width: 150rpx;
+				text-align: center;
+				flex-shrink: 0;
+			}
+			.game-type-image {
+				width: 80rpx;
+				height: 60rpx;
+			}
 		}
 	}
 </style>
