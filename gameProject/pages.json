@@ -1,0 +1,101 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/home/home",
+			"style": {
+				"navigationBarTitleText": ""
+			}
+		},
+		{
+			"path" : "pages/mine/mine",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/news/news",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/invite/invite",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/support/support",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/text/text",
+			"style" : 
+			{
+				"navigationBarTitleText" : "",
+				"enablePullDownRefresh" : false
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#E0A1B2",
+		"selectedColor": "#FFE89B",
+		"backgroundColor": "#b84863",
+		"borderStyle": "none",
+		"list": [
+			{
+				"pagePath": "pages/home/home",
+				"text": "Home",
+				"iconPath": "static/images/home.png",
+				"selectedIconPath": "static/images/home-select.png"
+			},
+			{
+				"pagePath": "pages/invite/invite",
+				"text": "Invite",
+				"iconPath": "static/images/invite.png",
+				"selectedIconPath": "static/images/invite-select.png"
+			},
+			{
+				"pagePath": "pages/news/news",
+				"text": "News",
+				"iconPath": "static/images/news.png",
+				"selectedIconPath": "static/images/news-select.png"
+			},
+			{
+				"pagePath": "pages/support/support",
+				"text": "Support",
+				"iconPath": "static/images/support.png",
+				"selectedIconPath": "static/images/support-select.png"
+			},
+			{
+				"pagePath": "pages/mine/mine",
+				"text": "Mine",
+				"iconPath": "static/images/mine.png",
+				"selectedIconPath": "static/images/mine-select.png"
+			}
+		]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "uni-app",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"uniIdRouter": {},
+	"style": {
+		"app-plus": {
+			"animationType": "fade-in",
+			"animationDuration": 300
+		}
+	}
+}
