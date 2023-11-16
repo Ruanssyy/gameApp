@@ -1,11 +1,11 @@
 //引入request
 import { request } from '@/utils/requset.js'
 //获取游戏列表
-export const getCateGames = (data) => {
+export const getCateGames = (url) => {
 	return request({
 		method: 'get',
-		url: '/api/get_cate_games?category_id=1&page=1&limit=1000',	
-	}, data)
+		url: `/api/get_cate_games?${url}`,	
+	},url)
 }
 //获取游戏类型
 export const getCategoryList = (data) => {

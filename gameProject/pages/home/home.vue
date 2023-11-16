@@ -22,16 +22,24 @@
 		</view>
 		<scroll-view scroll-x="true" >
 			<view class="game-type">
-				<view class="game-type-item" v-for="item in gameTypeList" :key="item.code">
+				<view :class="['game-type-item',gameCode == item.code ? 'game-type-item-active' :'']" v-for="item in gameTypeList" :key="item.code" @click="gameType(item)">
 					<view>
 						<image class="game-type-image" :src="item.image" mode=""></image>
 					</view>
-					<view class="">
+					<view>
 						{{item.cate_name}}
 					</view>
 				</view>
 			</view>
 		</scroll-view>
+		<view class="game-list">
+			<view class="game-list-item" v-for="game in gameList">
+				<image :src="game.image" mode=""></image>
+				<view class="">
+					{{game.game_name}}
+				</view>
+			</view>
+		</view>
 	</view>
 	</view>
 </template>
@@ -41,6 +49,7 @@
 	export default {
 		data() {
 			return {
+				gameCode:'pg',//当前游戏类型
 				swiperList: [{
 						imageUrl: '/static/logo.png'
 					},
@@ -51,7 +60,8 @@
 						imageUrl: '/static/logo.png'
 					}
 				],
-				gameTypeList:[]
+				gameTypeList:[],//游戏类型
+				gameList:[],//游戏列表
 			}
 		},
 		onLoad() {
@@ -64,23 +74,28 @@
 			init(){
 				this.getBannerFun()
 				this.getCategoryListFun()
-				this.getCateGamesFun()
+				this.getCateGamesFun(1)
 			},
 			getCategoryListFun(){
 				getCategoryList().then(res=>{
 					this.gameTypeList = res
 				})
 			},
-			getCateGamesFun(){
-				getCateGames().then(res=>{
-					console.log(res);
+			getCateGamesFun(id){
+				let url = `category_id=${id}&page=1&limit=1000`
+				getCateGames(url).then(res=>{
+					this.gameList = res
 				})
 			},
 			getBannerFun(){
 				getBanner().then(res=>{
-					console.log(res);
+				
 				})
-			}
+			},
+			gameType(game){
+				this.gameCode = game.code
+				this.getCateGamesFun(game.id)
+			},
 		}
 	}
 </script>
@@ -138,13 +153,28 @@
 			margin-top: 20rpx;
 			flex-wrap: nowrap;
 			.game-type-item {
-				width: 150rpx;
 				text-align: center;
 				flex-shrink: 0;
+				margin: 0 20rpx;
+			}
+			.game-type-item-active {
+				border-bottom: 3px solid #EFED6C;
 			}
 			.game-type-image {
 				width: 80rpx;
 				height: 60rpx;
+			}
+		}
+		.game-list {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			.game-list-item {
+				width: 300rpx;
+				uni-image {
+					width: 300rpx;
+					height: 300rpx;
+				}
 			}
 		}
 	}
