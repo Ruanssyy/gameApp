@@ -6,5 +6,6 @@ module.exports = {
                 changeOrigin: true, // 是否允许跨越
             }
         }
-    }
+    },
+	   transpileDependencies: ['uview-ui']
 }
