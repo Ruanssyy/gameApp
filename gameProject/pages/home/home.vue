@@ -9,7 +9,7 @@
 			</view>
 			<view class="nav-right">
 				<view class="right-com">
-					Ksolts.com1
+					Ksolts.com1ssssss
 				</view>
 			</view>
 		</view>
