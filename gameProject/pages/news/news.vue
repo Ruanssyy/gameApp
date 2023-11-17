@@ -80,17 +80,18 @@
 
 <style lang="scss">
 	.news {
+		font-size: 32rpx;
 		.news-swiper-container {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 115px;
+			height: 230rpx;
 
 			.swiper {
 				width: 90%;
 				border-radius: 10px;
 				margin-top: 10px;
-				height: 115px;
+				height: 230rpx;
 				.slide-image {
 					width: 100%;
 					height: 100%;
@@ -107,21 +108,21 @@
 			margin-top: 20px;
 			justify-content: space-between;
 			border-bottom: 1px solid #9B3A56;
-			padding: 10px;
+			padding: 20rpx;
 			.container-left {
-				width: calc(100% - 135px);
+				width: calc(100% - 115px);
 				.text{
 					color: #F8DBDE;
 				}
 				.time {
-					margin-top: 15px;
+					margin-top: 30rpx;
 					color: rgba(248,219,222,0.49);
 				}
 			}
 			.container-right {
 				.image {
-					width: 125px;
-					height: 86px;
+					width: 250rpx;
+					height: 202rpx;
 					border-radius: 5px 5px 5px 5px;
 				}
 			}

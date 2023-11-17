@@ -21,7 +21,7 @@
 			<view class="app-list">
 				<view class="list-item" v-for="item in appList">
 					<image class="image" :src="item.icon" mode=""></image>
-					<view class="">
+					<view class="list-name">
 						{{item.key}}
 					</view>
 				</view>
@@ -61,19 +61,20 @@
 
 <style lang="scss">
 	.support {
+		font-size: 32rpx;
 		.support-welcome {
-			height: 131px;
+			height: 262rpx;
 			display: flex;
 			align-items: center;
 			width: 90%;
 			margin: auto;
 			.image {
-				height: 131px;
-				width: 131px;
+				height: 262rpx;
+				width: 262rpx;
 			}
 			.welcome-text {
 				margin-left: 30px;
-				font-size: 21px;
+				font-size: 42rpx;
 				color: #fff;
 				.welcome {
 					margin-top: 5px;
@@ -82,7 +83,7 @@
 		}
 		.support-content {
 			width: 90%;
-			height: 357px;
+			height: 714rpx;
 			background: #FFFFFF;
 			border-radius: 10px 10px 10px 10px;
 			opacity: 1;
@@ -105,9 +106,9 @@
 				justify-content: space-around;
 				margin-top: 30px;
 				.list-item {
-					width: 91px;
-					height: 83px;
-					padding-bottom: 10px;
+					width: 182rpx;
+					height: 166rpx;
+					padding-bottom: 20rpx;
 					background: #F4F4F4;
 					border-radius: 5px 5px 5px 5px;
 					opacity: 1;
@@ -116,8 +117,12 @@
 					align-items: center;
 					justify-content: center;
 					.image {
-						height: 60px;
-						width: 60px;
+						height: 130rpx;
+						width: 130rpx;
+					}
+					.list-name{
+						width: 100%;
+						text-align: center;
 					}
 				}
 			}
@@ -134,8 +139,8 @@
 				margin: auto;
 			}
 			.support-bottom-btn {
-				width: 278px;
-				height: 44px;
+				width: 556rpx;
+				height: 88rpx;
 				background: #CA5C78;
 				border-radius: 5px 5px 5px 5px;
 				opacity: 1;

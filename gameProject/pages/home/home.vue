@@ -152,12 +152,12 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 115px;
+			height: 230rpx;
 
 			.swiper {
 				width: 90%;
 				border-radius: 10px;
-				height: 115px;
+				height: 230rpx;
 
 				.slide-image {
 					width: 100%;
@@ -183,7 +183,6 @@
 			display: flex;
 			margin-top: 20rpx;
 			flex-wrap: nowrap;
-
 			.game-type-item {
 				text-align: center;
 				flex-shrink: 0;
@@ -215,8 +214,8 @@
 			font-weight: bold;
 
 			.game-list-item {
-				width: 112px;
-				height: 172px;
+				width: 224rpx;
+				height: 344rpx;
 				border-radius: 7px 7px 7px 7px;
 				opacity: 1;
 				text-align: center;
@@ -224,20 +223,20 @@
 				box-sizing: border-box;
 
 				uni-image {
-					width: 112px;
-					height: 112px;
+					width: 224rpx;
+					height: 224rpx;
 				}
 
 				.text {
 					border-radius: 0 0 7px 7px;
-					font-size: 14px;
+					font-size: 28rpx;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					position: relative;
 					z-index: 9;
 					color: #FFFFFF;
-					height: 50px;
+					height: 100rpx;
 					opacity: 1;
 					margin-top: -10px;
 					box-shadow: -1px -10px 13px 3px #FCAA2C;
@@ -247,7 +246,7 @@
 		}
 
 		.game-list>i {
-			width: 112px;
+			width: 224rpx;
 		}
 	}
 </style>

@@ -1,6 +1,6 @@
 <template>
 	<view class="nav">
-		<image class="back" src="../static/images/go-back.png" mode="" @click="goBack"></image>
+		<image class="back" src="@/static/images/go-back.png" mode="" @click="goBack"></image>
 		<view class="title">
 			{{navSlot.title}}
 		</view>
