@@ -7,7 +7,7 @@
 				</swiper-item>
 			</swiper>
 		</view>
-		<view class="news-container" v-for="item in newsList">
+		<view class="news-container" v-for="item in newsList" @click="goDetail(item.key)" :key="item.key">
 			<view class="container-left">
 				<view class="text">
 					{{item.content}}
@@ -17,7 +17,7 @@
 				</view>
 			</view>
 			<view class="container-right">
-				<image class="image" src="../../static/logo.png" mode=""></image>
+				<image class="image" src="../../static/images/new-detail.png" mode=""></image>
 			</view>
 		</view>
 	</view>
@@ -38,31 +38,42 @@
 					}
 				],
 				newsList: [{
+					key:1,
 					content: 'Ensuring smooth flood discharge in the river channels, the six major cities in Huzhou Special',
 					time: '2023.12.12 19:00:00'
 				},{
+					key:2,
 					content: 'Ensuring smooth flood discharge in the river channels, the six major cities in Huzhou Special',
 					time: '2023.12.12 19:00:00'
 				},{
+					key:3,
 					content: 'Ensuring smooth flood discharge in the river channels, the six major cities in Huzhou Special',
 					time: '2023.12.12 19:00:00'
 				},{
+					key:4,
 					content: 'Ensuring smooth flood discharge in the river channels, the six major cities in Huzhou Special',
 					time: '2023.12.12 19:00:00'
 				},{
+					key:5,
 					content: 'Ensuring smooth flood discharge in the river channels, the six major cities in Huzhou Special',
 					time: '2023.12.12 19:00:00'
 				},{
+					key:6,
 					content: 'Ensuring smooth flood discharge in the river channels, the six major cities in Huzhou Special',
 					time: '2023.12.12 19:00:00'
 				},{
+					key:7,
 					content: 'Ensuring smooth flood discharge in the river channels, the six major cities in Huzhou Special',
 					time: '2023.12.12 19:00:00'
 				}]
 			}
 		},
 		methods: {
-
+			goDetail(id){
+				uni.navigateTo({
+					url:`/pages/news/new-detail/detail?id=${id}`
+				})
+			}
 		}
 	}
 </script>
@@ -80,7 +91,6 @@
 				border-radius: 10px;
 				margin-top: 10px;
 				height: 115px;
-
 				.slide-image {
 					width: 100%;
 					height: 100%;
