@@ -47,7 +47,7 @@
 					</image>
 					<view class="vip-right">
 						<view class="right-top">
-							<text>To the next level</text><text class="vip-text">VIP1</text>
+							<text>To the next level </text> <text class="vip-text">VIP1</text>
 						</view>
 						<view class="right-middle">
 							Bet another 100.00</view>
@@ -72,13 +72,18 @@
 				<list></list>
 			</view>
 		</view>
+		<view class="placeholder">
+
+		</view>
 	</view>
 </template>
 
 <script>
 	import list from "../../components/mine/configList.vue"
 	export default {
-		components: {list:list},
+		components: {
+			list: list
+		},
 		data() {
 			return {
 
@@ -92,17 +97,20 @@
 
 <style lang="scss">
 	.mine-body {
+		.placeholder {
+			height: 150rpx;
+		}
 
 		.mine-main {
 			box-sizing: border-box;
 			width: 100%;
 			// background: #F8DBDE;
-			padding-left: 10rpx;
-			padding-right: 10rpx;
+			padding-left: 28rpx;
+			padding-right: 46rpx;
 			padding-top: 10rpx;
 
 			.main-list {
-				
+				width: 100%;
 			}
 
 			.main-top {
@@ -127,10 +135,9 @@
 					align-items: center;
 
 					.bet-text {
-
 						font-size: 22rpx;
 						font-family: PingFang SC-Semibold, PingFang SC;
-						font-weight: 600;
+						font-weight: 500;
 						color: #FEDB5B;
 						line-height: 28rpx;
 						margin-left: 10rpx;
@@ -141,6 +148,7 @@
 						color: #FEDB5B;
 						font-family: PingFang SC-Semibold;
 						line-height: 28rpx;
+						margin-left: 10rpx;
 					}
 
 					.right-bottom {
@@ -174,6 +182,7 @@
 			height: 470rpx;
 			box-sizing: border-box;
 			background-image: url('../../static/images/mine/mine-bg.png');
+			background-repeat: no-repeat;
 			background-size: 100%;
 			padding-top: 146rpx;
 			padding-left: 24rpx;
@@ -207,6 +216,7 @@
 						width: 24rpx;
 						height: 24rpx;
 						background-image: url("../../static/images/mine/icon-change.png");
+						background-repeat: no-repeat;
 						margin-bottom: 10rpx;
 					}
 
@@ -224,6 +234,7 @@
 						width: 38rpx;
 						height: 36rpx;
 						background-image: url("../../static/images/mine/icon-1.png");
+						background-repeat: no-repeat;
 						background-size: 100%;
 						position: absolute;
 						right: 0;
@@ -233,15 +244,16 @@
 			}
 
 			.header-list {
+				width: 100%;
 				display: flex;
 				justify-content: space-between;
 				margin-top: 40rpx;
 
 				.list-item {
-					width: 110rpx;
+					width: calc(100%/4);
 					display: flex;
 					flex-direction: column;
-					align-items: flex-end;
+					align-items: center;
 
 					.item-top {
 						font-size: 26rpx;
