@@ -42,8 +42,7 @@
 		<view class="mine-main">
 			<view class="main-top">
 				<view class="top-vip">
-					<image src="../../static/images/mine/icon-vip-1.png" mode=""
-						style="width: 100rpx;height: 108rpx;margin-right: 20rpx;">
+					<image class="image" src="@/static/images/mine/icon-vip-1.png" mode="">
 					</image>
 					<view class="vip-right">
 						<view class="right-top">
@@ -79,7 +78,7 @@
 </template>
 
 <script>
-	import list from "../../components/mine/configList.vue"
+	import list from "@/components/mine/configList.vue"
 	export default {
 		components: {
 			list: list
@@ -133,7 +132,11 @@
 				.top-vip {
 					display: flex;
 					align-items: center;
-
+					.image{
+					width: 100rpx;
+					height: 108rpx;
+					margin-right: 20rpx;
+					}
 					.bet-text {
 						font-size: 22rpx;
 						font-family: PingFang SC-Semibold, PingFang SC;
