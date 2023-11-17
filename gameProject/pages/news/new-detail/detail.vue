@@ -1,6 +1,6 @@
 <template>
 	<view>
-		<NavHeader :slot-right="slotRight"></NavHeader>
+		<NavHeader :nav-slot="navSlot"></NavHeader>
 		{{id}}
 	</view>
 </template>
@@ -14,9 +14,10 @@
 		data() {
 			return {
 				id:'',
-				slotRight:{
-					name:'',
-					color:'yellow'
+				navSlot:{
+					title:'News',
+					color:'yellow',
+					rightName:''
 				}
 			}
 		},

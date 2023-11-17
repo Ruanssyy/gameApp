@@ -2,10 +2,10 @@
 	<view class="nav">
 		<image class="back" src="../static/images/go-back.png" mode="" @click="goBack"></image>
 		<view class="title">
-			News
+			{{navSlot.title}}
 		</view>
-		<view class="slot-right" :style="{color:slotRight.color}" @click="rightEvent">
-			{{slotRight.name}}
+		<view class="slot-right" :style="{color:navSlot.color}" @click="rightEvent">
+			{{navSlot.rightName}}
 		</view>
 	</view>
 </template>
@@ -13,7 +13,7 @@
 <script>
 	export default {
 		props: {
-			slotRight: {
+			navSlot: {
 				default: '',
 				type: Object
 			}
